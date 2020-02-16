@@ -1,0 +1,998 @@
+{
+	"info": {
+		"_postman_id": "3b82c49f-b7a6-4a85-8293-2e28044c31e1",
+		"name": "NJsonSchema Demo",
+		"description": "Endpoint for NJsonSchema Demo.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "json",
+			"item": [
+				{
+					"name": "json/json-schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44361/api/json/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json",
+								"json-schema"
+							]
+						},
+						"description": "Return schema from default sample object."
+					},
+					"response": []
+				},
+				{
+					"name": "json/json-schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"postedProp1\": \"Hello\",\n\t\"postedProp2\": true,\n\t\"postedProp3\": 3,\n\t\"postedProp4\": [\n\t\t\"a\", \"b\", \"c\"\n\t],\n\t\"postedProp5\": {\n\t\t\"postedProp1\": \"Hello\",\n\t\t\"postedProp2\": true,\n\t\t\"postedProp3\": 3,\n\t\t\"postedProp4\": [\n\t\t\t\"a\", \"b\", \"c\"\n\t\t]\n\t}\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/json/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json",
+								"json-schema"
+							]
+						},
+						"description": "Post any JSON object and get a JSON schema back."
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5f4a2965-2ee4-493e-9c9e-d1a8bb3e1204",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee9df45a-d5e5-4b45-a475-4eeb6a4dcc6f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "json-schema",
+			"item": [
+				{
+					"name": "json-schema/csharp",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/json-schema/csharp",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json-schema",
+								"csharp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "json-schema/typescript",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/json-schema/typescript",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json-schema",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "json-schema/yaml-schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/json-schema/yaml-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json-schema",
+								"yaml-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "json-schema/csharp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Model\",\r\n  \"type\": \"object\",\r\n  \"additionalProperties\": false,\r\n  \"properties\": {\r\n    \"Id\": {\r\n      \"type\": \"integer\",\r\n      \"format\": \"int32\"\r\n    },\r\n    \"Name\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"string\"\r\n      ]\r\n    },\r\n    \"Links\": {\r\n      \"type\": [\r\n        \"array\",\r\n        \"null\"\r\n      ],\r\n      \"items\": {\r\n        \"$ref\": \"#/definitions/LinkViewModel\"\r\n      }\r\n    },\r\n    \"Dictionary\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"object\"\r\n      ],\r\n      \"additionalProperties\": {\r\n        \"$ref\": \"#/definitions/LinkViewModel\"\r\n      }\r\n    },\r\n    \"SmallText\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"string\"\r\n      ]\r\n    },\r\n    \"Email\": {\r\n      \"oneOf\": [\r\n        {\r\n          \"type\": \"null\"\r\n        },\r\n        {\r\n          \"$ref\": \"#/definitions/LinkViewModel\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"definitions\": {\r\n    \"LinkViewModel\": {\r\n      \"type\": \"object\",\r\n      \"additionalProperties\": false,\r\n      \"properties\": {\r\n        \"Href\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        },\r\n        \"Label\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        },\r\n        \"Title\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/json-schema/csharp",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json-schema",
+								"csharp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "json-schema/typescript",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r\n  \"title\": \"Model\",\r\n  \"type\": \"object\",\r\n  \"additionalProperties\": false,\r\n  \"properties\": {\r\n    \"Id\": {\r\n      \"type\": \"integer\",\r\n      \"format\": \"int32\"\r\n    },\r\n    \"Name\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"string\"\r\n      ]\r\n    },\r\n    \"Links\": {\r\n      \"type\": [\r\n        \"array\",\r\n        \"null\"\r\n      ],\r\n      \"items\": {\r\n        \"$ref\": \"#/definitions/LinkViewModel\"\r\n      }\r\n    },\r\n    \"Dictionary\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"object\"\r\n      ],\r\n      \"additionalProperties\": {\r\n        \"$ref\": \"#/definitions/LinkViewModel\"\r\n      }\r\n    },\r\n    \"SmallText\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"string\"\r\n      ]\r\n    },\r\n    \"Email\": {\r\n      \"oneOf\": [\r\n        {\r\n          \"type\": \"null\"\r\n        },\r\n        {\r\n          \"$ref\": \"#/definitions/LinkViewModel\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"definitions\": {\r\n    \"LinkViewModel\": {\r\n      \"type\": \"object\",\r\n      \"additionalProperties\": false,\r\n      \"properties\": {\r\n        \"Href\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        },\r\n        \"Label\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        },\r\n        \"Title\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/json-schema/typescript",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json-schema",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "json-schema/yaml-schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r\n  \"title\": \"Model\",\r\n  \"type\": \"object\",\r\n  \"additionalProperties\": false,\r\n  \"properties\": {\r\n    \"Id\": {\r\n      \"type\": \"integer\",\r\n      \"format\": \"int32\"\r\n    },\r\n    \"Name\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"string\"\r\n      ]\r\n    },\r\n    \"Links\": {\r\n      \"type\": [\r\n        \"array\",\r\n        \"null\"\r\n      ],\r\n      \"items\": {\r\n        \"$ref\": \"#/definitions/LinkViewModel\"\r\n      }\r\n    },\r\n    \"Dictionary\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"object\"\r\n      ],\r\n      \"additionalProperties\": {\r\n        \"$ref\": \"#/definitions/LinkViewModel\"\r\n      }\r\n    },\r\n    \"SmallText\": {\r\n      \"type\": [\r\n        \"null\",\r\n        \"string\"\r\n      ]\r\n    },\r\n    \"Email\": {\r\n      \"oneOf\": [\r\n        {\r\n          \"type\": \"null\"\r\n        },\r\n        {\r\n          \"$ref\": \"#/definitions/LinkViewModel\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"definitions\": {\r\n    \"LinkViewModel\": {\r\n      \"type\": \"object\",\r\n      \"additionalProperties\": false,\r\n      \"properties\": {\r\n        \"Href\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        },\r\n        \"Label\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        },\r\n        \"Title\": {\r\n          \"type\": [\r\n            \"null\",\r\n            \"string\"\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/json-schema/yaml-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"json-schema",
+								"yaml-schema"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "yaml-schema",
+			"item": [
+				{
+					"name": "yaml-schema/json-schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/yaml-schema/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"yaml-schema",
+								"json-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yaml-schema/csharp",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/yaml-schema/csharp",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"yaml-schema",
+								"csharp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yaml-schema/typescript",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/yaml-schema/typescript",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"yaml-schema",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yaml-schema/json-schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "$schema: http://json-schema.org/draft-04/schema#\r\ntitle: Model\r\ntype: object\r\nadditionalProperties: false\r\nproperties:\r\n  Id:\r\n    type: integer\r\n    format: int32\r\n  Name:\r\n    type:\r\n    - null\r\n    - string\r\n  Links:\r\n    type:\r\n    - array\r\n    - null\r\n    items:\r\n      $ref: '#/definitions/LinkViewModel'\r\n  Dictionary:\r\n    type:\r\n    - null\r\n    - object\r\n    additionalProperties:\r\n      $ref: '#/definitions/LinkViewModel'\r\n  SmallText:\r\n    type:\r\n    - null\r\n    - string\r\n  Email:\r\n    oneOf:\r\n    - type: null\r\n    - $ref: '#/definitions/LinkViewModel'\r\ndefinitions:\r\n  LinkViewModel:\r\n    type: object\r\n    additionalProperties: false\r\n    properties:\r\n      Href:\r\n        type:\r\n        - null\r\n        - string\r\n      Label:\r\n        type:\r\n        - null\r\n        - string\r\n      Title:\r\n        type:\r\n        - null\r\n        - string\r\n"
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/yaml-schema/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"yaml-schema",
+								"json-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yaml-schema/csharp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "$schema: http://json-schema.org/draft-04/schema#\r\ntitle: Model\r\ntype: object\r\nadditionalProperties: false\r\nproperties:\r\n  Id:\r\n    type: integer\r\n    format: int32\r\n  Name:\r\n    type:\r\n    - null\r\n    - string\r\n  Links:\r\n    type:\r\n    - array\r\n    - null\r\n    items:\r\n      $ref: '#/definitions/LinkViewModel'\r\n  Dictionary:\r\n    type:\r\n    - null\r\n    - object\r\n    additionalProperties:\r\n      $ref: '#/definitions/LinkViewModel'\r\n  SmallText:\r\n    type:\r\n    - null\r\n    - string\r\n  Email:\r\n    oneOf:\r\n    - type: null\r\n    - $ref: '#/definitions/LinkViewModel'\r\ndefinitions:\r\n  LinkViewModel:\r\n    type: object\r\n    additionalProperties: false\r\n    properties:\r\n      Href:\r\n        type:\r\n        - null\r\n        - string\r\n      Label:\r\n        type:\r\n        - null\r\n        - string\r\n      Title:\r\n        type:\r\n        - null\r\n        - string\r\n"
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/yaml-schema/csharp",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"yaml-schema",
+								"csharp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yaml-schema/typescript",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "$schema: http://json-schema.org/draft-04/schema#\r\ntitle: Model\r\ntype: object\r\nadditionalProperties: false\r\nproperties:\r\n  Id:\r\n    type: integer\r\n    format: int32\r\n  Name:\r\n    type:\r\n    - null\r\n    - string\r\n  Links:\r\n    type:\r\n    - array\r\n    - null\r\n    items:\r\n      $ref: '#/definitions/LinkViewModel'\r\n  Dictionary:\r\n    type:\r\n    - null\r\n    - object\r\n    additionalProperties:\r\n      $ref: '#/definitions/LinkViewModel'\r\n  SmallText:\r\n    type:\r\n    - null\r\n    - string\r\n  Email:\r\n    oneOf:\r\n    - type: null\r\n    - $ref: '#/definitions/LinkViewModel'\r\ndefinitions:\r\n  LinkViewModel:\r\n    type: object\r\n    additionalProperties: false\r\n    properties:\r\n      Href:\r\n        type:\r\n        - null\r\n        - string\r\n      Label:\r\n        type:\r\n        - null\r\n        - string\r\n      Title:\r\n        type:\r\n        - null\r\n        - string\r\n"
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/yaml-schema/typescript",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"yaml-schema",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "32375e59-5ae3-4cb5-8e92-df205dc1a9e8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5541c85f-f25e-499b-b528-cc273422821c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "csharp",
+			"item": [
+				{
+					"name": "csharp/json-schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/csharp/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"csharp",
+								"json-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "csharp/yaml-schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/csharp/yaml-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"csharp",
+								"yaml-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "csharp/typescript",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/plain",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/csharp/typescript",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"csharp",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "csharp/json-schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "using System;\r\nusing System.Collections.Generic;\r\n\r\npublic partial class Model\r\n{   \r\n    public virtual int Id { get; set; }\r\n    public virtual string Name { get; set; }\r\n    public virtual List<LinkViewModel> Links { get; set; }\r\n    public virtual Dictionary<string, LinkViewModel> Dictionary { get; set; }\r\n    public virtual string SmallText { get; set; }\r\n    public virtual LinkViewModel Email { get; set; }\r\n}\r\n\r\npublic partial class LinkViewModel\r\n{   \r\n    public virtual string Href { get; set; }\r\n    public virtual string Label { get; set; }\r\n    public virtual string Title { get; set; }\r\n}    \r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/csharp/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"csharp",
+								"json-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "csharp/yaml-schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "using System;\r\nusing System.Collections.Generic;\r\n\r\npublic partial class Model\r\n{   \r\n    public virtual int Id { get; set; }\r\n    public virtual string Name { get; set; }\r\n    public virtual List<LinkViewModel> Links { get; set; }\r\n    public virtual Dictionary<string, LinkViewModel> Dictionary { get; set; }\r\n    public virtual string SmallText { get; set; }\r\n    public virtual LinkViewModel Email { get; set; }\r\n}\r\n\r\npublic partial class LinkViewModel\r\n{   \r\n    public virtual string Href { get; set; }\r\n    public virtual string Label { get; set; }\r\n    public virtual string Title { get; set; }\r\n}    \r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/csharp/yaml-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"csharp",
+								"yaml-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "csharp/typescript",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "using System;\r\nusing System.Collections.Generic;\r\n\r\npublic partial class Model\r\n{   \r\n    public virtual int Id { get; set; }\r\n    public virtual string Name { get; set; }\r\n    public virtual List<LinkViewModel> Links { get; set; }\r\n    public virtual Dictionary<string, LinkViewModel> Dictionary { get; set; }\r\n    public virtual string SmallText { get; set; }\r\n    public virtual LinkViewModel Email { get; set; }\r\n}\r\n\r\npublic partial class LinkViewModel\r\n{   \r\n    public virtual string Href { get; set; }\r\n    public virtual string Label { get; set; }\r\n    public virtual string Title { get; set; }\r\n}    \r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/csharp/typescript",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"csharp",
+								"typescript"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "typescript",
+			"item": [
+				{
+					"name": "typescript/csharp",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/typescript/csharp",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"typescript",
+								"csharp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "typescript/json-schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/typescript/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"typescript",
+								"json-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "typescript/yaml-schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/typescript/yaml-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"typescript",
+								"yaml-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "typescript/csharp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/typescript/csharp",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"typescript",
+								"csharp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "typescript/json-schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/typescript/json-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"typescript",
+								"json-schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "typescript/yaml-schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/typescript/yaml-schema",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"typescript",
+								"yaml-schema"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c91aa646-73c6-4747-95f4-1ae755571f2e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b2c25a53-1d10-459c-b431-7a83dfdd2794",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

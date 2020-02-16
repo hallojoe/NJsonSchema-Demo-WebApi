@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "3b82c49f-b7a6-4a85-8293-2e28044c31e1",
+		"name": "NJsonSchema Demo",
+		"description": "Endpoint for NJsonSchema Demo.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get json/json-schema",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44361/api/json/json-schema",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"json",
+						"json-schema"
+					]
+				},
+				"description": "Return schema from default sample object."
+			},
+			"response": []
+		},
+		{
+			"name": "post json/json-schema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"postedProp1\": \"Hello\",\n\t\"postedProp2\": true,\n\t\"postedProp3\": 3,\n\t\"postedProp4\": [\n\t\t\"a\", \"b\", \"c\"\n\t],\n\t\"postedProp5\": {\n\t\t\"postedProp1\": \"Hello\",\n\t\t\"postedProp2\": true,\n\t\t\"postedProp3\": 3,\n\t\t\"postedProp4\": [\n\t\t\t\"a\", \"b\", \"c\"\n\t\t]\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/json/json-schema",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"json",
+						"json-schema"
+					]
+				},
+				"description": "Post any JSON object and get a JSON schema back."
+			},
+			"response": []
+		},
+		{
+			"name": "csharp/json-schema get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/csharp/json-schema",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"csharp",
+						"json-schema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "yaml/json-schema get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/yaml/json-schema",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"yaml",
+						"json-schema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "csharp/typescript get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/csharp/typescript",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"csharp",
+						"typescript"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "typescript/json-schema get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/typescript/json-schema",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"typescript",
+						"json-schema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "json-schema/csharp post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r\n  \"type\": \"object\",\r\n  \"properties\": {\r\n    \"postedProp1\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"postedProp2\": {\r\n      \"type\": \"boolean\"\r\n    },\r\n    \"postedProp3\": {\r\n      \"type\": \"integer\"\r\n    },\r\n    \"postedProp4\": {\r\n      \"type\": \"array\",\r\n      \"items\": {\r\n        \"$ref\": \"#/definitions/PostedProp4\"\r\n      }\r\n    },\r\n    \"postedProp5\": {\r\n      \"$ref\": \"#/definitions/PostedProp5\"\r\n    }\r\n  },\r\n  \"definitions\": {\r\n    \"PostedProp4\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"PostedProp5\": {\r\n      \"type\": \"object\",\r\n      \"properties\": {\r\n        \"postedProp1\": {\r\n          \"type\": \"string\"\r\n        },\r\n        \"postedProp2\": {\r\n          \"type\": \"boolean\"\r\n        },\r\n        \"postedProp3\": {\r\n          \"type\": \"integer\"\r\n        },\r\n        \"postedProp4\": {\r\n          \"type\": \"array\",\r\n          \"items\": {\r\n            \"$ref\": \"#/definitions/Anonymous3\"\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"Anonymous3\": {\r\n      \"type\": \"string\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/json-schema/csharp",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"json-schema",
+						"csharp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "json-schema/csharp get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/json-schema/csharp",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"json-schema",
+						"csharp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "json-schema/typescript get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/json-schema/typescript",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"json-schema",
+						"typescript"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "json-schema/typescript post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r\n  \"type\": \"object\",\r\n  \"properties\": {\r\n    \"postedProp1\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"postedProp2\": {\r\n      \"type\": \"boolean\"\r\n    },\r\n    \"postedProp3\": {\r\n      \"type\": \"integer\"\r\n    },\r\n    \"postedProp4\": {\r\n      \"type\": \"array\",\r\n      \"items\": {\r\n        \"$ref\": \"#/definitions/PostedProp4\"\r\n      }\r\n    },\r\n    \"postedProp5\": {\r\n      \"$ref\": \"#/definitions/PostedProp5\"\r\n    }\r\n  },\r\n  \"definitions\": {\r\n    \"PostedProp4\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"PostedProp5\": {\r\n      \"type\": \"object\",\r\n      \"properties\": {\r\n        \"postedProp1\": {\r\n          \"type\": \"string\"\r\n        },\r\n        \"postedProp2\": {\r\n          \"type\": \"boolean\"\r\n        },\r\n        \"postedProp3\": {\r\n          \"type\": \"integer\"\r\n        },\r\n        \"postedProp4\": {\r\n          \"type\": \"array\",\r\n          \"items\": {\r\n            \"$ref\": \"#/definitions/Anonymous3\"\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"Anonymous3\": {\r\n      \"type\": \"string\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/json-schema/typescript",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"json-schema",
+						"typescript"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
