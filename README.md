@@ -29,7 +29,7 @@ Postman FTW - In the root of the solution a Postman collection exist. It contain
 `GET` `POST` `/api/json-schema/typescript`
 
 
-`GET` `POST` `/api/yaml-schema/yaml-schema`
+`GET` `POST` `/api/yaml-schema/json-schema`
 
 `GET` `POST` `/api/yaml-schema/csharp`
 
